@@ -2,7 +2,6 @@
 
 A responsive, interactive web app to simulate and compare CPU scheduling algorithms. Visualize Gantt charts, turnaround time, waiting time, and discover which algorithm performs best under your custom process load.
 
-
 ✨ Features
 
 📊 Gantt Chart Visualization — Displays execution timeline for each process.
@@ -15,25 +14,23 @@ A responsive, interactive web app to simulate and compare CPU scheduling algorit
 
 ⏱️ Time Quantum Control — Customize quantum for RR and preemptive algorithms.
 
-
 🧠 Algorithms Implemented
 
-Algorithm	Type
+Algorithm Type
 
-FCFS	Non-preemptive
+FCFS Non-preemptive
 
-SJF	Non-preemptive
+SJF Non-preemptive
 
-SRJF	Preemptive
+SRJF Preemptive
 
-Round Robin (RR)	Preemptive
+Round Robin (RR) Preemptive
 
-Priority (Non-preemptive)	Non-preemptive
+Priority (Non-preemptive) Non-preemptive
 
-Priority (Preemptive)	Preemptive
+Priority (Preemptive) Preemptive
 
 Idle times and accurate CPU gaps are visualized using labeled Gantt blocks.
-
 
 🛠️ Tech Stack
 
@@ -45,27 +42,21 @@ Idle times and accurate CPU gaps are visualized using labeled Gantt blocks.
 
 🧩 Process Scheduling algorithms implementations in pure JavaScript
 
-
 🧰 Installation
 
 bash
 
-# Clone the repo
-
+Clone the repo
 git clone https://github.com/Gurpreet-05/ProcessSchedulingVisualizer.git
 
-# Navigate
-
+Navigate
 cd process-scheduling-visualizer
 
-# Install dependencies
-
+Install dependencies
 npm install
 
-# Start the dev server
-
+Start the dev server
 npm run dev
-
 
 🔬 Usage
 
@@ -83,5 +74,4 @@ Use Comparison View to see which algorithm performs best.
 
 Pull requests are welcome! If you'd like to suggest improvements, bug fixes, or new algorithms, feel free to fork and open a PR.
 
-📜 License
-MIT © Gurpreet
+📜 License MIT © Gurpreet
