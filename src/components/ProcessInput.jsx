@@ -24,26 +24,32 @@ export default function ProcessInput() {
   };
 
   return (
-    <div className="space-y-2 mb-6">
+    <div className="space-y-2 flex flex-col gap-3">
       <div className="flex gap-2 flex-wrap font-mono text-lg">
         <input className="border p-2" placeholder="Arrival" value={arrival} onChange={(e) => setArrival(e.target.value)} />
         <input className="border p-2" placeholder="Burst" value={burst} onChange={(e) => setBurst(e.target.value)} />
         <input className="border p-2" placeholder="Priority (optional)" value={priority} onChange={(e) => setPriority(e.target.value)} />
         <input className="border p-2" placeholder="TQ (Default : 2)" value={TQ} onChange={(e) => setTQ(e.target.value)} />
       </div>
-      <button className="bg-orange-400 text-white px-4 rounded text-xl" onClick={addProcess}>Add</button>
+      <div>
+        <button className="bg-orange-400 text-white px-4 rounded text-xl" onClick={addProcess}>Add</button>
+      </div>
+      
 
-      <select
-        className="border p-2 font-mono"
-        onChange={(e) => setAlgorithm(e.target.value)}
-      >
-        <option value="FCFS">FCFS</option>
-        <option value="SJF">SJF</option>
-        <option value="SRJF">SRJF</option>
-        <option value="RR">RR</option>
-        <option value="Priority (Non-preemptive)">Priority (Non-preemptive)</option>
-        <option value="Priority (Preemptive)">Priority (Preemptive)</option>
-      </select>
+      <div>
+        <select
+          className="border p-2 font-mono"
+          onChange={(e) => setAlgorithm(e.target.value)}
+        >
+          <option value="FCFS">FCFS</option>
+          <option value="SJF">SJF</option>
+          <option value="SRJF">SRJF</option>
+          <option value="RR">RR</option>
+          <option value="Priority (Non-preemptive)">Priority (Non-preemptive)</option>
+          <option value="Priority (Preemptive)">Priority (Preemptive)</option>
+        </select>
+      </div>
+      
 
     </div>
   );
