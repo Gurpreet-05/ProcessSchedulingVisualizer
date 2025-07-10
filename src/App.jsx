@@ -17,7 +17,7 @@ function MainApp() {
     <div className="bg-gray-300 min-h-screen">
       <div className="p-4 max-w-5xl mx-auto">
         <h1 className="text-3xl font-bold mb-4 text-center text-blue-600 font-sans">Process Scheduling Visualizer</h1>
-        <h2 className="text-center font-semibold font-mono">Visualize and compare CPU scheduling algorithms easily.</h2>
+        <h2 className="text-center font-semibold font-mono">Visualize and compare CPU scheduling algorithms easily</h2>
         
         <ProcessInput />
 
@@ -37,8 +37,20 @@ function MainApp() {
         )}
 
         {processes.length === 0 && (
-          <p className="text-center text-gray-500 mt-6 font-mono">Please enter process data to start.</p>
+          <p className="text-center text-gray-500 mt-6 font-mono">Please enter process data to start</p>
         )}
+
+
+        <footer className="bg-gray-800 text-gray-300 py-6 mt-10 font-mono">
+          <div className="max-w-5xl mx-auto text-center space-y-2">
+            <p className="text-sm">Process Scheduling Visualizer · Built with React, Recoil, and TailwindCSS</p>
+            <p className="text-sm">MIT License · © {new Date().getFullYear()} Gurpreet</p>
+            <div className="text-xs">
+              <a href="https://github.com/Gurpreet-05" target="_blank" className="underline hover:text-white mx-2">GitHub</a>
+              <a href="https://www.linkedin.com/in/gurpreet-singh-096a7b286" target="_blank" className="underline hover:text-white mx-2">LinkedIn</a>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   );
