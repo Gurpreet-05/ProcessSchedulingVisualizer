@@ -8,7 +8,6 @@ export default function Comparison() {
   const processes = useRecoilValue(processesAtom);
   const results = allAlgorithmsSummary(processes,tq);
 
-  // Determine best algorithm by lowest average waiting time
   const best = results.reduce((min, curr) => (curr.avgWT < min.avgWT ? curr : min), results[0]);
 
 

@@ -14,7 +14,6 @@ export function simulateAlgorithm(processes, algo,tq) {
   if (algo === "RR") return rr(processes,tq);
   if(algo === "Priority (Preemptive)") return priorityPreemptive(processes);
   if(algo === "SRJF") return srjf(processes);
-  // fallback
   return fcfs(processes);
 }
 

@@ -3,7 +3,7 @@ export default function rr(processes,tq) {
   const gantt = [];
   const table = [];
 
-  // Prepare per-process state
+  // new state
   const state = processes.map(p => ({
     pid: p.pid,
     arrival: p.arrival,
@@ -19,7 +19,7 @@ export default function rr(processes,tq) {
   let arrived = [...state].sort((a, b) => a.arrival - b.arrival);
   const queue = [];
 
-  // Initially push processes that have arrived
+  // Initially arrived
   queue.push(...arrived.filter(p => p.arrival <= time));
   arrived = arrived.filter(p => p.arrival > time);
   tq=parseInt(tq);
@@ -40,7 +40,7 @@ export default function rr(processes,tq) {
     p.remaining -= execTime;
     gantt.push({ pid: p.pid, start, end: time });
 
-    // Add newly arrived processes to queue
+    //  newly arrived
     const newArrivals = arrived.filter(proc => proc.arrival <= time);
     queue.push(...newArrivals);
     arrived = arrived.filter(proc => proc.arrival > time);

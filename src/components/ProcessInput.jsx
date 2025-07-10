@@ -19,7 +19,7 @@ export default function ProcessInput() {
       };
       const updated = [...processes, newProcess];
       setProcesses(updated);
-      setArrival(""); setBurst(""); setPriority(""); // setTQ("");
+      setArrival(""); setBurst(""); setPriority("");
     }
   };
 
@@ -30,8 +30,8 @@ export default function ProcessInput() {
         <input className="border p-2" placeholder="Burst" value={burst} onChange={(e) => setBurst(e.target.value)} />
         <input className="border p-2" placeholder="Priority (optional)" value={priority} onChange={(e) => setPriority(e.target.value)} />
         <input className="border p-2" placeholder="TQ (Default : 2)" value={TQ} onChange={(e) => setTQ(e.target.value)} />
-        <button className="bg-orange-400 text-white px-4 rounded text-xl" onClick={addProcess}>Add</button>
       </div>
+      <button className="bg-orange-400 text-white px-4 rounded text-xl" onClick={addProcess}>Add</button>
 
       <select
         className="border p-2 font-mono"

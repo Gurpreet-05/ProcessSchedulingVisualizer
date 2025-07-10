@@ -7,11 +7,11 @@ export default function sjf(processes) {
   while (remaining.length > 0) {
     const ready = remaining.filter(p => p.arrival <= time);
 
-    // Insert idle block if CPU is waiting
+    // idle if CPU waiting
     if (ready.length === 0) {
       const nextArrival = Math.min(...remaining.map(p => p.arrival));
       gantt.push({
-        pid: -1, // Indicates idle time
+        pid: -1, 
         start: time,
         end: nextArrival
       });
@@ -19,7 +19,6 @@ export default function sjf(processes) {
       continue;
     }
 
-    // Select process with shortest burst time
     ready.sort((a, b) => a.burst - b.burst);
     const p = ready[0];
 

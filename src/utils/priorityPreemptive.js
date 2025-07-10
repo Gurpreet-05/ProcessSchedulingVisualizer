@@ -30,12 +30,11 @@ export default function priorityPreemptive(processes) {
     }
 
     if (idx === -1) {
-      // No process is ready — CPU is idle
+      // idle
       if (prev !== -1) {
         gantt.push({ pid: -1, start: time });
       }
       time++;
-      // End the idle block at current time
       gantt[gantt.length - 1].end = time;
       prev = -1;
     } else {

@@ -31,7 +31,7 @@ export default function srjf(processes) {
     }
 
     if (idx === -1) {
-      // No process is ready — insert idle time
+      // idle
       if (prev !== -1) {
         gantt.push({ pid: -1, start: time });
       }

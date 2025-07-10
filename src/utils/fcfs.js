@@ -4,10 +4,9 @@ export default function fcfs(processes) {
   let gantt = [];
 
   const table = sorted.map((p) => {
-    // If the next process hasn't arrived yet, the CPU is idle
     if (p.arrival > time) {
       gantt.push({
-        pid: -1, // Indicates idle time
+        pid: -1, // idle
         start: time,
         end: p.arrival,
       });

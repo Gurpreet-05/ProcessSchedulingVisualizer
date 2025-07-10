@@ -7,11 +7,11 @@ export default function priorityNP(processes) {
   while (remaining.length > 0) {
     const ready = remaining.filter(p => p.arrival <= time);
 
-    // If no process is ready, CPU is idle
+    // idle
     if (ready.length === 0) {
       const nextArrival = Math.min(...remaining.map(p => p.arrival));
       gantt.push({
-        pid: -1, // Indicates idle time
+        pid: -1, // idle
         start: time,
         end: nextArrival,
       });
@@ -19,7 +19,7 @@ export default function priorityNP(processes) {
       continue;
     }
 
-    // Pick highest priority process (higher number = higher priority)
+    // (higher number = higher priority)
     ready.sort((a, b) => b.priority - a.priority);
     const p = ready[0];
 

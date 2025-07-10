@@ -14,7 +14,6 @@ export default function Visualization() {
     <div className="mt-6">
       <h2 className="text-xl font-bold mb-2 text-center font-sans">Gantt Chart ({algorithm})</h2>
 
-      {/* Gantt Chart */}
       <div className="flex items-end justify-center overflow-x-auto font-mono text-xs">
         {gantt.map((block, idx) => {
           const isIdle = block.pid === -1;
@@ -42,7 +41,7 @@ export default function Visualization() {
 
 
 
-      {/* Table */}
+
       <h2 className="text-xl font-bold mt-10 mb-2 text-center font-sans">Process Table</h2>
       <div className="overflow-x-auto font-mono text-sm">
         <table className="min-w-full text-center border">
