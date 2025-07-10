@@ -16,18 +16,31 @@ export default function Visualization() {
 
       {/* Gantt Chart */}
       <div className="flex items-end justify-center overflow-x-auto font-mono text-xs">
-        {gantt.map((block, idx) => (
-          <div key={idx} className="flex flex-col items-center relative mx-0.2">
-            <div className="bg-blue-400 text-white px-4 py-2 rounded">
-              {block.pid!=-1?block.pid: "Idle"}
+        {gantt.map((block, idx) => {
+          const isIdle = block.pid === -1;
+          const isAlt = idx % 2 === 0;
+
+          const blockColor = isAlt
+              ? "bg-blue-400 text-white"
+              : "bg-blue-500 text-white";
+
+          return (
+            <div key={idx} className="flex flex-col items-center">
+              {/* Gantt Block */}
+              <div className={`px-4 py-2 w-full text-center ${blockColor} border border-black`}>
+                {isIdle ? "Idle" : `P${block.pid}`}
+              </div>
+
+              <div className="flex justify-between w-full text-black px-1 mt-1">
+                {idx === 0 ? <span>{block.start}</span> : <span>    </span>}
+                <span>{block.end}</span>
+              </div>
             </div>
-            <div className="flex justify-between w-full text-xs text-black">
-              {idx==0 ?<span>{block.start}</span> : <span></span> }
-              <span>{block.end}</span>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
+
+
 
       {/* Table */}
       <h2 className="text-xl font-bold mt-10 mb-2 text-center font-sans">Process Table</h2>
