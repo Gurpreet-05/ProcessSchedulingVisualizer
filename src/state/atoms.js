@@ -9,3 +9,8 @@ export const selectedAlgorithmAtom = atom({
   key: "selectedAlgorithmAtom",
   default: "FCFS",
 });
+
+export const timeQuantumAtom = atom({
+  key: "timeQuantumAtom",
+  default: "",
+});
