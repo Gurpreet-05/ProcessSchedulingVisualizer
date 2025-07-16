@@ -51,7 +51,7 @@ export default function ProcessInput() {
 
   return (
     <div className="space-y-2 flex flex-col gap-3">
-      <div className="flex gap-3 flex-wrap font-mono">
+      <div className="flex gap-4 flex-wrap font-mono">
         <input className="border p-2" placeholder="Arrival" value={arrival} onChange={(e) => setArrival(e.target.value)}/>
         <input className="border p-2" placeholder="Burst" value={burst} onChange={(e) => setBurst(e.target.value)}/>
         <input className="border p-2" placeholder="Priority (optional)" value={priority} onChange={(e) => setPriority(e.target.value)}/>
