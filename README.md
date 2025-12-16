@@ -45,6 +45,7 @@ npm install
 # Start the dev server
 npm run dev
 
+```
 
 🔬 Usage
 Add Processes: Use the Arrival, Burst, and Priority fields to input data.
