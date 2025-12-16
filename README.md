@@ -47,25 +47,18 @@ npm run dev
 
 ```
 
-#🔬 Usage
+## 🔬 Usage
 
+1. **Add Processes:** Use the **Arrival**, **Burst**, and **Priority** fields to input data.
+2. **Set Constraints:** Adjust the **Time Quantum** if using Round Robin.
+3. **Select Algorithm:** Choose a scheduler from the dropdown menu.
+4. **Visualize:** View the generated Gantt chart and calculated metrics.
+5. **Compare:** Use the **Comparison View** to see which algorithm performs best for your dataset.
 
-Add Processes: Use the Arrival, Burst, and Priority fields to input data.
-
-Set Constraints: Adjust the Time Quantum if using Round Robin.
-
-Select Algorithm: Choose a scheduler from the dropdown menu.
-
-Visualize: View the generated Gantt chart and calculated metrics.
-
-Compare: Use the Comparison View to see which algorithm performs best for your dataset.
-
-#🤝 Contributing
-
+## 🤝 Contributing
 
 Pull requests are welcome! If you'd like to suggest improvements, bug fixes, or new algorithms, feel free to fork the repository and open a PR.
 
-#📜 License
-
+## 📜 License
 
 MIT © Gurpreet
